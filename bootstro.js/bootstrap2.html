@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootstro.js demo</title>
+    <title>bootstrap2-Bootstro.js demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/bootstrap/css/bootstrap.css" rel="stylesheet">
     
     <style type="text/css">
       body {
@@ -90,6 +90,7 @@
       	width:400px;
       }
     </style>
+    <link href="/assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -126,44 +127,9 @@
         </div><!-- /.navbar -->
       </div>
 		<div class='alert alert-danger'>
-		Yay. Finally bootstro now supports Bootstrap 3, after a very very long procrastination. Good news is
-		 <ul>
-                <li>Every thing still stays the same. You pretty much don't need to change anything</a></li>
-                <li>Latest Bootstro.js still works with Bootstrap 2 by adding the following 1 single line 
-                <pre>bootstro.set_bootstrap_version(2);</pre> <strong>before</strong> calling bootstro.start().
-                Please have a look at this <a href='bootstrap2.html'>bootstrap 2 page demo</a>
-                It also uses the latest <a href='bootstro.js'>bootstro.js</a>
-                </li>
-             </ul>
+		This page is the demo for using latest bootstro.js and bootstrap 2.  Demo purposes only. If you wanna read
+		the documentation, please see <a href='index.html'>in bootstrap 3 demo page</a>
 		</div>
-		<div class='alert'>
-		<h1>Q & A related to the support-bootstrap-3 upgrade</h1> 
-		 <ul>
-                <li><b>Q</b>: I'm already using bootstro.js & bootstrap 2. What do i need to do to support Bootstrap 3?
-                <br/>
-                <b>A</b>: Upgrade your bootstrap to  version 3 and use latest bootstro.js. Phew! No code changes.
-                </li>
-                
-                <li><b>Q</b>: I'm already using bootstro.js & bootstrap 2. If i upgrade bootstro.js to latest version (which is the version that starts to support bootstrap 3)
-                what do i need to do?
-                <br/>
-                <b>A</b>: call bootstro.set_bootstrap_version(2) before calling any bootstro.start()
-                </li>
-                
-                <li><b>Q</b>: What was actually changed? 
-                <br/>
-                <b>A</b>: With bootstrap 3, the only buggy thing is simply that the default btn class "btn-mini" 
-                doesn't work anymore. So I added a bootstro.set_bootstrap_version to use "btn-xs" or "btn-mini" accordingly
-                </li>
-                
-             </ul>
-		</div>
-		<div class='alert'>
-		Many thanks to <a href='http://github.com/netsstea'>netsstea</a> 's <a href='https://github.com/clu3/bootstro.js/pull/42'>patch</a>
-		. So here comes the demo/documentation. Sorry about this messy page, it's really messy. I'm just too busy :(
-		</div>
-
-		
       <!-- Jumbotron -->
       <div class="jumbotron">
         <h1 class='bootstro' 
@@ -180,7 +146,7 @@
         <a class="btn btn-large btn-success" href="#" id='demo'>Click me! I'm a Demo</a>
       </div>
 
-      <div class='row bootstro_size1' data-bootstro-title="When there's only me" data-bootstro-content="Then there's only a simple popover. Nothing else">
+      <div class='row-fluid bootstro_size1' data-bootstro-title="When there's only me" data-bootstro-content="Then there's only a simple popover. Nothing else">
       <h3>Other quick demos:</h3>
       	<i>View javascript at the end of this HTML file to see show to trigger those actions</i>
       	<br/><br/>
@@ -198,8 +164,8 @@
 	      The data format is exactly the same as what's returned from ajax data. See this merged <a href='https://github.com/clu3/bootstro.js/pull/25'>Pull Request </a> by <a href='https://github.com/bglick'>@bglick</a>  
 	      
       </div>
-      <div class='row'>
-      	<div class='col-md-12'>
+      <div class='row-fluid'>
+      	<div class='span12'>
       		<h2 class='label label-important'>Known issues</h2>
       		<div>
       		1. The "data-bootstro-title" attribute is overridden by the "title" attribute. This is 
@@ -214,8 +180,8 @@
       </div>
       <hr>
       <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4 bootstro" 
+      <div class="row-fluid">
+        <div class="span4 bootstro" 
         	data-bootstro-title="I can align to [left,right,bottom,top]" 
         	data-bootstro-content="Simply because I am a popover. Specify me with <b>data-bootstro-placement</b>"
         	data-bootstro-placement='right'
@@ -232,7 +198,7 @@
           All <b>events unbinded</b> when the intro stops</p>
         </div>
       
-        <div class="col-md-4 bootstro" 
+        <div class="span4 bootstro" 
         	data-bootstro-title="I am simple" 
         	data-bootstro-content="Call bootstro.start('.bootstro') or just <b>bootstro.start()</b>"
         	data-bootstro-step='1'
@@ -247,7 +213,7 @@
           and server also can decide which elements to show more easily,or translate the show more easily. <a href='javascript:void(0);' class='demo_ajax'>Try it</a></p>
         	
         </div>
-        <div class="col-md-4 bootstro" 
+        <div class="span4 bootstro" 
         	data-bootstro-title="I can resize my width too" 
         	data-bootstro-content="By adding <b>data-bootstro-width</b> attribute"
         	data-bootstro-width="600px"
@@ -443,11 +409,13 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="/assets/bootstrap/js/jquery.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
     <link href="./bootstro.css" rel="stylesheet">
     <script src="https://raw.github.com/clu3/bootstro.js/master/bootstro.js"></script>
 	<script>
 		$(document).ready(function(){
+		    bootstro.set_bootstrap_version(2);
+
 		    $("#demo").click(function(){
 		        bootstro.start(".bootstro", {
 		            onComplete : function(params)
